@@ -35,17 +35,31 @@ document.getElementById("answer1").innerHTML =
 
 var today = new Date ();
 var day = today.getDate();
-var month = today.getMonth();
+//var month = today.getMonth();
+var month = new Array();
+  month[0] = "01";
+  month[1] = "02";
+  month[2] = "03";
+  month[3] = "04";
+  month[4] = "05";
+  month[5] = "06";
+  month[6] = "07";
+  month[7] = "08";
+  month[8] = "09";
+  month[9] = "10";
+  month[10] = "11";
+  month[11] = "12";
+var n = month[today.getMonth()];
 var year = today.getFullYear();
 if (day < 10) {
   day = "0" + day;
 }
-if (month < 10) {
+/* if (month < 10) {
   month = "0" + month;
-}
+} */
 
 document.getElementById("answer2").innerHTML =
-  month + "-" + day + "-" + year + "<br>" + month + "/" + day + "/" + year + "<br>" + day + "/" + month + "/'" + year;
+  n + "-" + day + "-" + year + "<br>" + n + "/" + day + "/" + year + "<br>" + day + "/" + n + "/'" + year;
 
 /* 3.--------
 */
